@@ -37,7 +37,6 @@ This system automatically moves new client information from online forms directl
 
 ## Costs
 
-Estimated monthly total: $25-45
 - Most services start free
 - Costs only increase with usage
 - Google Forms included in current workspace
