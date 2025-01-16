@@ -82,10 +82,10 @@ Below are Mermaid-based flowcharts detailing the key processes in this pipeline.
 flowchart LR
     A[Client fills Google Form] --> B[Apps Script Trigger]
     B --> C[AWS Lambda - Webhook Endpoint]
-    C --> D[DynamoDB - Store Structured Data]
+    C --> D[DynamoDB - Store Data]
     D --> E[Remix SPA Dashboard<br>(AWS CloudFront / S3)]
     D --> F[Chrome Extension]
-    C --> G[Real-Time Notification via<br>WebSockets / SNS (Optional)]
+    C --> G[Real-Time Notification<br>via WebSockets / SNS]
     G --> F
     F -->|On SimplePractice pages| H[Automated Data Entry]
 ```
