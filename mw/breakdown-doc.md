@@ -81,13 +81,13 @@ Below are Mermaid-based flowcharts detailing the key processes in this pipeline.
 ```mermaid
 flowchart LR
     A[Client fills Google Form] --> B[Apps Script Trigger]
-    B --> C[AWS Lambda - Webhook Endpoint]
-    C --> D[DynamoDB - Store Data]
-    D --> E[Remix SPA Dashboard<br>(AWS CloudFront / S3)]
+    B --> C[AWS Lambda Endpoint]
+    C --> D[DynamoDB Storage]
+    D --> E[Remix SPA Dashboard]
     D --> F[Chrome Extension]
-    C --> G[Real-Time Notification<br>via WebSockets / SNS]
+    C --> G[Real-Time Notification]
     G --> F
-    F -->|On SimplePractice pages| H[Automated Data Entry]
+    F --> H[Automated Data Entry]
 ```
 
 Description:
@@ -124,10 +124,10 @@ Description:
 ### Remix Dashboard & APIs
 ```mermaid
 flowchart LR
-    A[Admin Logs In<br>(Remix SPA)] --> B[Dashboard UI<br>(Browser)]
+    A[Admin Logs In] --> B[Dashboard UI]
     B --> C[Remix Server Routes]
     C --> D[DynamoDB]
-    C --> E[Automation Config Mappings]
+    C --> E[Automation Configs]
     D --> B
     E --> B
 ```
