@@ -83,9 +83,9 @@ flowchart LR
     A[Client fills Google Form] --> B[Apps Script Trigger]
     B --> C[AWS Lambda - Webhook Endpoint]
     C --> D[DynamoDB - Store Structured Data]
-    D --> E[Remix SPA Dashboard\n(AWS CloudFront / S3)]
+    D --> E[Remix SPA Dashboard<br>(AWS CloudFront / S3)]
     D --> F[Chrome Extension]
-    C --> C --> G[Real-Time Notification via\nWebSockets / SNS (Optional)]
+    C --> G[Real-Time Notification via<br>WebSockets / SNS (Optional)]
     G --> F
     F -->|On SimplePractice pages| H[Automated Data Entry]
 ```
@@ -124,7 +124,7 @@ Description:
 ### Remix Dashboard & APIs
 ```mermaid
 flowchart LR
-    A[Admin Logs In\n(Remix SPA)] --> B[Dashboard UI\n(Browser)]
+    A[Admin Logs In<br>(Remix SPA)] --> B[Dashboard UI<br>(Browser)]
     B --> C[Remix Server Routes]
     C --> D[DynamoDB]
     C --> E[Automation Config Mappings]
