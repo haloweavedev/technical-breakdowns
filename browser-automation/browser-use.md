@@ -12,7 +12,7 @@ The provided Python script demonstrates the use of the `browser_use` library in 
 
 2. **`langchain_openai` and `langchain_anthropic` Libraries**: These provide interfaces to OpenAI's and Anthropic's language models, respectively, facilitating natural language processing capabilities.
 
-3. **`mindwell-form-app`**: A Single Page Application (SPA) built with Remix, utilizing Aurora DB, and hosted on Vercel.
+3. **`mw-form-app`**: A Single Page Application (SPA) built with Remix, utilizing Aurora DB, and hosted on Vercel.
 
 ### Workflow Breakdown
 
