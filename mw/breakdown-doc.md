@@ -81,7 +81,7 @@ Below are Mermaid-based flowcharts detailing the key processes in this pipeline.
 ```mermaid
 flowchart LR
     A[Client fills Google Form] --> B[Apps Script Trigger]
-    B --> C[AWS Lambda - test - {Webhook Endpoint}]
+    B --> C[AWS Lambda - Webhook Endpoint]
     C --> D[DynamoDB - Store Structured Data]
     D --> E[Remix SPA Dashboard\n(AWS CloudFront / S3)]
     D --> F[Chrome Extension]
