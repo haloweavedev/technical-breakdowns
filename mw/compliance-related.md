@@ -164,6 +164,56 @@ flowchart LR
 
 ---
 
+# Using Local Storage Instead of Remix + DynamoDB
+
+Below is a simplified, highly technical explanation of how we'll replace the Remix+DynamoDB layer with **local** storage in the Chrome extension, while still exposing a minimal API for data flow.
+
+## Overview
+
+1. **Form Submission**  
+   When a user submits a Google Form, a Google Apps Script trigger fires.
+
+2. **Data Delivery to Extension**  
+   Instead of pushing the form data to a remote AWS-based API and DynamoDB, the script sends the data to a lightweight endpoint or directly to the extension.  
+   - If we still need a public endpoint, it will only handle transient data transfer or signals to notify the extension that new data is available.
+
+3. **Local Storage**  
+   Upon receiving form data, the **extension** immediately stores it in `chrome.storage.local` (or an in-memory store if needed). This prevents PHI from residing on an external database.
+
+4. **Extension API**  
+   The extension exposes its own minimal API (or uses an internal messaging system) that allows other parts of the extension to retrieve, update, or process local data.  
+   - Example: The content script calls the extension's internal API to fetch stored form submissions, then auto-fills SimplePractice fields.
+
+5. **SimplePractice Automation**  
+   Once on the correct SimplePractice page, the extension injects scripts that read from local storage, maps each field to the UI, and automates data entry.
+
+## Flowchart
+
+```mermaid
+flowchart LR
+    A[Google Form Submission] - B[Apps Script Trigger]
+    B - C[Minimal Endpoint Or Direct Extension Message]
+    C - D[Chrome Extension Local Storage]
+    D - E[SimplePractice Auto-Fill]
+```
+
+* A: The end-user completes and submits a Google Form.
+* B: On submission, Apps Script is triggered to process or forward the data.
+* C: A minimal endpoint or direct script message passes the data to the Chrome extension.
+* D: The extension saves data in local storage (no external DB) and makes it available to other extension components.
+* E: When the extension detects the correct page in SimplePractice, it retrieves data locally and auto-fills all required fields.
+
+## Technical Highlights
+
+* **No DynamoDB**: We avoid storing PHI externally by removing DynamoDB. Any central server is optional and would only handle lightweight signals or minimal data references.
+* **Local Storage**: All sensitive data is kept within the user's Chrome extension in `chrome.storage.local`. This drastically reduces external exposure and simplifies compliance.
+* **Minimal API**: If needed, an API can still exist to notify extensions of new submissions. This API does not persist data; it just routes traffic or signals. The extension then immediately stores everything locally.
+* **Automation Logic**: The business rules (e.g., matching clinicians, scheduling) can run **inside** the extension. AI or advanced logic can also be handled locally or with a compliant external service that processes de-identified data.
+
+By relying primarily on local storage, we maintain a secure, private environment for PHI. Any external communication is limited to transient notifications, significantly reducing compliance overhead.
+
+---
+
 ## Edge Cases & Considerations
 1. **Multiple Admins / Multi-User Collaboration**  
    - **Option A** has a centralized database; easy for multiple admins to view data.  
