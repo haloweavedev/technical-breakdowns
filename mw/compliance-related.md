@@ -191,10 +191,10 @@ Below is a simplified, highly technical explanation of how we'll replace the Rem
 
 ```mermaid
 flowchart LR
-    A[Google Form Submission] - B[Apps Script Trigger]
-    B - C[Minimal Endpoint Or Direct Extension Message]
-    C - D[Chrome Extension Local Storage]
-    D - E[SimplePractice Auto-Fill]
+    A[Google Form Submission] --> B[Apps Script Trigger]
+    B --> C[Minimal Endpoint Or Direct Extension Message]
+    C --> D[Chrome Extension Local Storage]
+    D --> E[SimplePractice Auto-Fill]
 ```
 
 * A: The end-user completes and submits a Google Form.
