@@ -116,11 +116,11 @@ Both approaches maintain a similar user experience (automatic data entry in Simp
 ```mermaid
 flowchart LR
     A[Client fills Google Form] --> B[Apps Script Trigger]
-    B --> C[AWS Lambda Endpoint, HIPAA Compliant]
+    B --> C[AWS Lambda Endpoint - HIPAA Compliant]
     C --> D[DynamoDB - Encrypted]
-    D --> E[Remix SPA Dashboard (Secure Login)]
-    D --> F[Chrome Extension (Notified via WS)]
-    C --> G[Real-Time Notification (WebSocket)]
+    D --> E[Remix SPA Dashboard - Secure Login]
+    D --> F[Chrome Extension - Notified via WS]
+    C --> G[Real-Time Notification - WebSocket]
     G --> F
     F --> H[Automated Data Entry in SimplePractice]
 ```
