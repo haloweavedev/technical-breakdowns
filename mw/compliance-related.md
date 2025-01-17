@@ -136,9 +136,9 @@ flowchart LR
 ```mermaid
 flowchart LR
     A[Client fills Google Form] --> B[Apps Script]
-    B --(Minimal Notification)--> C[Chrome Extension <br>(Local Storage)]
-    C --> D[Automated Data Entry <br> in SimplePractice]
-    C --> E[Local AI Matching <br>(Optional)]
+    B --(Minimal Notification)--> C[Chrome Extension - Local Storage]
+    C --> D[Automated Data Entry in SimplePractice]
+    C --> E[Local AI Matching]
 ```
 
 1. **Form**: Client or patient submits PHI.  
