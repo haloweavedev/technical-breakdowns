@@ -117,7 +117,7 @@ Both approaches maintain a similar user experience (automatic data entry in Simp
 flowchart LR
     A[Client fills Google Form] --> B[Apps Script Trigger]
     B --> C[AWS Lambda Endpoint, HIPAA Compliant]
-    C --> D[DynamoDB (Encrypted)]
+    C --> D[DynamoDB - Encrypted]
     D --> E[Remix SPA Dashboard (Secure Login)]
     D --> F[Chrome Extension (Notified via WS)]
     C --> G[Real-Time Notification (WebSocket)]
