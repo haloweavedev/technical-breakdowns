@@ -207,6 +207,74 @@ flowchart TD
 
 ---
 
+## 7. Pricing & Maintenance Costs
+
+### 7.1 Development Cost Breakdown
+
+**Total Project Cost: ₹5.5 Lakhs**
+
+1. **Mobile Application (₹3 Lakhs)**
+   - React Native with Expo development for iOS and Android
+   - Platform-specific optimizations and testing
+   - App store submission preparation
+   - Integration with backend APIs
+   - User authentication implementation
+   
+2. **Web Application (₹2.5 Lakhs)**
+   - Next.js full-stack development
+   - Server-side rendering implementation
+   - Admin dashboard development
+   - API development and integration
+   - Database schema and management
+
+**Payment Terms:**
+- 50% advance payment (₹2.75 Lakhs)
+- 50% pre-release payment (₹2.75 Lakhs)
+
+### 7.2 Monthly Maintenance Costs (Approximate)
+
+1. **Infrastructure & Hosting**
+   - Vercel Pro Plan: $20-40/month (Based on traffic)
+   - Supabase Database: $25-50/month (Depends on storage & compute needs)
+   - CDN for Video Content: $50-100/month (Based on bandwidth)
+
+2. **Authentication & Security**
+   - Clerk Authentication: $25-50/month (Based on active users)
+   - OR NextAuth.js: Free (Self-hosted)
+   - SSL Certificates: Free with Vercel
+
+3. **Payment Processing**
+   - Razorpay Standard Plan: 2% + GST per transaction
+   - Setup Fee: Free
+   - API Usage: Included in standard plan
+
+4. **App Store Costs**
+   - Apple Developer Account: $99/year
+   - Google Play Developer Account: $25 (One-time)
+
+5. **Other Services**
+   - Error Monitoring (Sentry): $29/month
+   - Email Service (Resend): $20/month
+   - Analytics (Mixpanel/PostHog): $25/month
+
+**Estimated Total Monthly Operating Cost: ₹10,000 - ₹25,000 [~50k users]**
+(Varies based on usage, traffic, and scale of operations)
+
+### 7.3 Optional Add-ons & Scaling Costs
+
+1. **Performance Upgrades**
+   - Enhanced Vercel Plan: Additional $60-100/month
+   - Dedicated Supabase Instance: Additional $50-100/month
+
+2. **Advanced Features**
+   - Real-time Chat/Messaging: ₹50,000 (One-time development)
+   - Advanced Analytics Dashboard: ₹30,000 (One-time development)
+
+3. **Support Plans**
+   - Priority Support: ₹25,000/month
+
+---
+
 ## Conclusion
 
 At Haloweave, we're committed to delivering a **scalable, high-performance educational platform** that aligns perfectly with your vision. Our approach harnesses the flexibility of **Next.js 15+**, **React Native with Expo**, and a **shared API** to unify user experiences across devices. We look forward to partnering with you on this exciting journey and ensuring a successful, on-schedule launch to empower Grades 6–12 with interactive learning.
