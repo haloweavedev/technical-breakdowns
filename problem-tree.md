@@ -1,3 +1,6 @@
+# Problem Tree: PWDs Continue to Remain Marginalized
+
+```mermaid
 flowchart TB
     %% Define styles
     classDef rootCause fill:#f9f9f9,stroke:#666,stroke-width:2px,color:#333
@@ -8,7 +11,7 @@ flowchart TB
     classDef label fill:#fff,stroke:none,color:#666,font-style:italic
 
     %% Core Problem (Center)
-    CoreProblem[PWDs continue to<br/>remain<br/>marginalized]:::coreProblem
+    CoreProblem[PWDs continue to<br/>remain<br/>remain<br/>marginalized]:::coreProblem
 
     %% Root Causes Section
     RootLabel{Root Causes}:::label
@@ -97,7 +100,7 @@ flowchart TB
     %% Connections - Secondary Consequences
     ForPWDs --> LimitedAgency
     ForPWDs --> IneqAccess
-
+```
     ForNGOs --> StagnantGrowth
     ForNGOs --> WeakPolicy
     ForNGOs --> IneffUse
